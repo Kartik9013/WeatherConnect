@@ -1,0 +1,286 @@
+.body {
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  object-fit: contain;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  color: #666;
+  margin-right: 1rem;
+}
+
+.temp-toggle {
+  padding: 0.5rem 1rem;
+  background: white;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 500;
+  border: 1px solid #ddd;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .main-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 999px 0 0 999px;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6;
+  border: 1px solid #ccc;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 0 999px 999px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #1a6df3;
+}
+
+.weather-display {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.city-name {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.temp-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.temperature {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.temp-info {
+  margin-left: 1rem;
+  text-align: left;
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.feels-like {
+  color: #666;
+}
+
+.weather-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.label {
+  color: #666;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.forecast-scroll {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.placeholder {
+  margin: auto;
+  text-align: center;
+  color: #666;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.aqi-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.aqi-bar-bg {
+  flex: 1;
+  background: #e0e0e0;
+  height: 1rem;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.aqi-bar-fill {
+  height: 1rem;
+  background: #4caf50;
+  width: 0%;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.aqi-value {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.aqi-description {
+  font-size: 14px;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.weather-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.temperature {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.description {
+  text-transform: capitalize;
+  color: #475569;
+}
+
+.details {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #334155;
+}
+
+.forecast-day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.forecast-day:last-child {
+  border-bottom: none;
+}
+
+.forecast-date {
+  width: 80px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.forecast-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.forecast-temp {
+  font-size: 14px;
+  color: #334155;
+}
+
+.error-text {
+  color: red;
+  text-align: center;
+  padding: 20px;
+}

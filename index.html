@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherConnect</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body">
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="logo-container">
+          <img src="res/logo.jpg" alt="WeatherConnect logo" class="logo" />
+          <h1 class="site-title">WeatherConnect</h1>
+        </div>
+        <div class="header-right">
+          <div id="current-date" class="date"></div>
+          <div id="temp-toggle" class="temp-toggle">
+            <span id="temp-unit">°C</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <div class="main-grid">
+        <!-- Current Weather -->
+        <div class="weather-card current-weather">
+          <div class="search-container">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search city..."
+              class="search-input"
+            />
+            <button id="search-btn" class="search-button">Search</button>
+          </div>
+
+          <div id="current-weather" class="weather-display">
+            <div class="icon-container">
+              <img
+                id="current-weather-icon"
+                src="res/logo.jpg"
+                alt="Current weather icon"
+                class="weather-icon"
+              />
+            </div>
+            <h2 id="current-city" class="city-name">--</h2>
+            <div class="temp-details">
+              <p id="current-temp" class="temperature">--</p>
+              <div class="temp-info">
+                <p id="weather-description" class="description">--</p>
+                <p id="feels-like" class="feels-like">Feels like: --</p>
+              </div>
+            </div>
+            <div class="weather-stats">
+              <div class="stat">
+                <p class="label">Humidity</p>
+                <p id="humidity" class="value">--%</p>
+              </div>
+              <div class="stat">
+                <p class="label">Wind</p>
+                <p id="wind-speed" class="value">-- km/h</p>
+              </div>
+              <div class="stat">
+                <p class="label">Pressure</p>
+                <p id="pressure" class="value">-- hPa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forecast Section -->
+        <div class="weather-card forecast-section">
+          <h3 class="section-title">Hourly Forecast</h3>
+          <div id="hourly-forecast" class="forecast-scroll">
+            <div class="placeholder">Search a city to see hourly forecast</div>
+          </div>
+
+          <h3 class="section-title">5-Day Forecast</h3>
+          <div id="daily-forecast" class="daily-forecast">
+            <div class="placeholder">Search a city to see 5-day forecast</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Weather Info -->
+      <div class="weather-card additional-info">
+        <h3 class="section-title">Weather Details</h3>
+        <div class="details-grid">
+          <div>
+            <p class="label">Sunrise</p>
+            <p id="sunrise" class="value">--:--</p>
+          </div>
+          <div>
+            <p class="label">Sunset</p>
+            <p id="sunset" class="value">--:--</p>
+          </div>
+          <div>
+            <p class="label">Visibility</p>
+            <p id="visibility" class="value">-- km</p>
+          </div>
+          <div>
+            <p class="label">Cloud Cover</p>
+            <p id="clouds" class="value">--%</p>
+          </div>
+        </div>
+
+        <div class="aqi-container">
+          <h4 class="sub-title">Air Quality Index (AQI)</h4>
+          <div class="aqi-bar-wrapper">
+            <div class="aqi-bar-bg">
+              <div id="aqi-bar" class="aqi-bar-fill"></div>
+            </div>
+            <span id="aqi-value" class="aqi-value">--</span>
+          </div>
+          <p id="aqi-description" class="aqi-description">
+            Search a city to see air quality data
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
